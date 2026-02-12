@@ -1,0 +1,70 @@
+{
+  "name": "andyfraussen/laravel-uitdatabank-client",
+  "description": "A fluent Laravel client for publiq UiTdatabank APIs (Search available, more on roadmap)",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Andy Fraussen",
+      "homepage": "https://github.com/andyfraussen"
+    }
+  ],
+  "keywords": [
+    "laravel",
+    "uitdatabank",
+    "search",
+    "taxonomy",
+    "entry",
+    "publiq"
+  ],
+  "homepage": "https://github.com/andyfraussen/laravel-uitdatabank-client",
+  "support": {
+    "issues": "https://github.com/andyfraussen/laravel-uitdatabank-client/issues",
+    "source": "https://github.com/andyfraussen/laravel-uitdatabank-client"
+  },
+  "require": {
+    "php": "^8.3",
+    "ext-json": "*",
+    "illuminate/support": "^12.0",
+    "illuminate/http": "^12.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^10.0",
+    "pestphp/pest": "^3.0",
+    "pestphp/pest-plugin-laravel": "^3.0",
+    "phpunit/phpunit": "^11.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AndyFraussen\\UiTdatabankClient\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AndyFraussen\\UiTdatabankClient\\UiTdatabankServiceProvider"
+      ],
+      "aliases": {
+        "UiTdatabank": "AndyFraussen\\UiTdatabankClient\\Facades\\UiTdatabank"
+      }
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/pest --configuration=phpunit.xml.dist"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "config": {
+    "platform": {
+      "php": "8.3.0"
+    },
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}

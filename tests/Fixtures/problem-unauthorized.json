@@ -1,0 +1,6 @@
+{
+  "title": "Unauthorized",
+  "type": "https://api.publiq.be/probs/auth/unauthorized",
+  "status": 401,
+  "detail": "No x-api-key header or apiKey parameter found"
+}

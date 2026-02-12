@@ -1,0 +1,12 @@
+{
+  "@context": "http://www.w3.org/ns/hydra/context.jsonld",
+  "@type": "PagedCollection",
+  "itemsPerPage": 1,
+  "totalItems": 15609,
+  "member": [
+    {
+      "@id": "https://io-test.uitdatabank.be/event/e7806ab8-876c-4315-93ab-393492442ea3",
+      "@type": "Event"
+    }
+  ]
+}
