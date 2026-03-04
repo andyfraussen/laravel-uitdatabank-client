@@ -30,8 +30,6 @@
   },
   "require-dev": {
     "orchestra/testbench": "^10.0",
-    "pestphp/pest": "^3.0",
-    "pestphp/pest-plugin-laravel": "^3.0",
     "phpunit/phpunit": "^11.0"
   },
   "autoload": {
@@ -55,16 +53,13 @@
     }
   },
   "scripts": {
-    "test": "vendor/bin/pest --configuration=phpunit.xml.dist"
+    "test": "vendor/bin/phpunit --configuration=phpunit.xml.dist"
   },
   "minimum-stability": "stable",
   "prefer-stable": true,
   "config": {
     "platform": {
       "php": "8.3.0"
-    },
-    "allow-plugins": {
-      "pestphp/pest-plugin": true
     }
   }
 }

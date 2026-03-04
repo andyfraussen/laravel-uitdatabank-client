@@ -2,6 +2,7 @@
 
 namespace AndyFraussen\UiTdatabankClient;
 
+use AndyFraussen\UiTdatabankClient\Http\TaxonomyClient;
 use AndyFraussen\UiTdatabankClient\Http\UiTdatabankClient;
 use Illuminate\Support\ServiceProvider;
 
@@ -15,8 +16,13 @@ class UiTdatabankServiceProvider extends ServiceProvider
             config: $app['config']
         ));
 
+        $this->app->singleton(TaxonomyClient::class, fn ($app) => new TaxonomyClient(
+            config: $app['config']
+        ));
+
         $this->app->singleton(UiTdatabankManager::class, fn ($app) => new UiTdatabankManager(
-            $app->make(UiTdatabankClient::class)
+            $app->make(UiTdatabankClient::class),
+            $app->make(TaxonomyClient::class),
         ));
 
         $this->app->alias(UiTdatabankManager::class, 'uitdatabank');

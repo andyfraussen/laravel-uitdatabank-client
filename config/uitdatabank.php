@@ -19,4 +19,8 @@ return [
         'times' => (int) env('UITDATABANK_RETRY_TIMES', 3),
         'sleep' => (int) env('UITDATABANK_RETRY_SLEEP', 100),
     ],
+
+    'taxonomy' => [
+        'base_url' => env('UITDATABANK_TAXONOMY_URL', 'https://taxonomy.uitdatabank.be'),
+    ],
 ];
