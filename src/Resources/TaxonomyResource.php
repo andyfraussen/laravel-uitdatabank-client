@@ -15,6 +15,6 @@ class TaxonomyResource
     {
         $response = $this->client->get('/terms');
 
-        return TaxonomyResultData::fromArray($response->json());
+        return TaxonomyResultData::fromArray($response->json() ?? []);
     }
 }

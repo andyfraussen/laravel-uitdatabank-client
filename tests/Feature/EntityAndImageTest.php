@@ -6,7 +6,7 @@ use Tests\TestCase;
 
 class EntityAndImageTest extends TestCase
 {
-    public function testKeepsPackageFocusedOnSearchResourcesOnly(): void
+    public function testImageResourceIsAbsent(): void
     {
         $this->assertFalse(class_exists(\AndyFraussen\UiTdatabankClient\Resources\ImageResource::class));
     }

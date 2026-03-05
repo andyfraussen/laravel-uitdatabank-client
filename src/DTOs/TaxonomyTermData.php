@@ -8,7 +8,7 @@ readonly class TaxonomyTermData
 {
     public function __construct(
         public string $id,
-        public TaxonomyDomain $domain,
+        public ?TaxonomyDomain $domain,
         public array $scope,
         public TaxonomyTermNameData $name,
         public array $otherSuggestedTerms,
@@ -25,7 +25,7 @@ readonly class TaxonomyTermData
 
         return new self(
             id: (string) ($data['id'] ?? ''),
-            domain: TaxonomyDomain::from((string) ($data['domain'] ?? '')),
+            domain: TaxonomyDomain::tryFrom((string) ($data['domain'] ?? '')),
             scope: (array) ($data['scope'] ?? []),
             name: TaxonomyTermNameData::fromArray((array) ($data['name'] ?? [])),
             otherSuggestedTerms: $suggested,
