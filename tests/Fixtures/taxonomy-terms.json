@@ -1,0 +1,39 @@
+{
+    "terms": [
+        {
+            "id": "3.23.3.0.0",
+            "domain": "facility",
+            "scope": ["events", "places"],
+            "name": {
+                "nl": "Rolstoeltoegankelijk",
+                "fr": "Accessible en fauteuil roulant",
+                "de": "Rollstuhlgerecht",
+                "en": "Wheelchair accessible"
+            }
+        },
+        {
+            "id": "0.50.4.0.0",
+            "domain": "eventtype",
+            "scope": ["events"],
+            "name": {
+                "nl": "Concert",
+                "fr": "Concert",
+                "de": "Konzert",
+                "en": "Concert"
+            },
+            "otherSuggestedTerms": [
+                {
+                    "id": "1.8.3.5.0",
+                    "domain": "theme",
+                    "scope": ["events"],
+                    "name": {
+                        "nl": "Pop en rock",
+                        "fr": "Pop et rock",
+                        "de": "Pop und Rock",
+                        "en": "Pop and rock"
+                    }
+                }
+            ]
+        }
+    ]
+}

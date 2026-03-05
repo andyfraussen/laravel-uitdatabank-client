@@ -20,7 +20,7 @@ Search endpoints currently supported:
 ## Roadmap
 
 - [x] Search API
-- [ ] Taxonomy API (`GET /terms`)
+- [x] Taxonomy API (`GET /terms`)
 - [ ] Entry API
 
 ## Features
@@ -60,6 +60,9 @@ UITDATABANK_API_KEY=your-api-key
 UITDATABANK_TIMEOUT=30
 UITDATABANK_RETRY_TIMES=3
 UITDATABANK_RETRY_SLEEP=100
+
+# Optional: override the Taxonomy API base URL (defaults to https://taxonomy.uitdatabank.be)
+UITDATABANK_TAXONOMY_URL=https://taxonomy.uitdatabank.be
 ```
 
 Available environments:
@@ -94,6 +97,16 @@ $result = UiTdatabank::offers()
     ->embed(['location', 'organizer'])
     ->where('sort[created]', 'desc')
     ->get();
+```
+
+### Taxonomy
+
+```php
+$terms = UiTdatabank::taxonomy()->terms();
+
+foreach ($terms->terms as $term) {
+    echo $term->name->nl; // e.g. "Concert"
+}
 ```
 
 ### Runtime credential override

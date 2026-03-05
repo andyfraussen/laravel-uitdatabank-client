@@ -6,6 +6,7 @@ use AndyFraussen\UiTdatabankClient\UiTdatabankManager;
 use Illuminate\Support\Facades\Facade;
 
 /**
+ * @method static \AndyFraussen\UiTdatabankClient\Resources\TaxonomyResource taxonomy()
  * @method static \AndyFraussen\UiTdatabankClient\Resources\OfferSearchResource offers()
  * @method static \AndyFraussen\UiTdatabankClient\Resources\EventSearchResource events()
  * @method static \AndyFraussen\UiTdatabankClient\Resources\PlaceSearchResource places()

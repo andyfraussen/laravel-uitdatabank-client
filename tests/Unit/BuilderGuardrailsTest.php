@@ -1,12 +1,19 @@
 <?php
 
+namespace Tests\Unit;
+
 use AndyFraussen\UiTdatabankClient\Pending\PendingSearch;
 use AndyFraussen\UiTdatabankClient\UiTdatabankManager;
+use Tests\TestCase;
 
-it('returns pending search builders from resources', function (): void {
-    $pending = app(UiTdatabankManager::class)
-        ->offers()
-        ->newQuery();
+class BuilderGuardrailsTest extends TestCase
+{
+    public function testReturnsPendingSearchBuildersFromResources(): void
+    {
+        $pending = app(UiTdatabankManager::class)
+            ->offers()
+            ->newQuery();
 
-    expect($pending)->toBeInstanceOf(PendingSearch::class);
-});
+        $this->assertInstanceOf(PendingSearch::class, $pending);
+    }
+}
